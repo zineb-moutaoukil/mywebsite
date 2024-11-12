@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ma Première Page</title>
+    <style>
+ /* Set background image for the entire page */
+        body {
+            background-image: url('https://i.pinimg.com/736x/16/41/07/1641074345e2edee65f9014be80ad908.jpg');
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .result {
+            margin-top: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            display: none;
+        }
+        img {
+            max-width: 300px;
+            display: block;
+            margin-top: 5px;
+        }
+
+        h1 {
+            color: purple;
+            font-family: 'Arial', sans-serif;
+            font-size: 50px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Let me explain to you how much I love you</h1>
+
+    <label for="value-list">Reasons why I love you:</label>
+    <select id="value-list" name="values" onchange="showResult()">
+        <option value="">wili u dont know 😱</option>
+        <option value="smart">You are smart 🧠</option>
+        <option value="nice">You are nice to me 😍</option>
+        <option value="cute">You are cute 🥰</option>
+        <option value="love">I just love you ❤️</option>
+      
+    </select>
+
+    <div id="smart" class="result">
+      You are one of the most brilliant minds I’ve ever known, and I admire you deeply 💫. I aspire to think as clearly and creatively as you do one day. Your perspective on the world 🌎—the way you see and understand things—it captivates me, drawing me closer in both love and respect ❤️. Your opinion means so much to me, and every time you tell me I’m smart, I feel truly seen and valued 🥰. With you, I’m inspired to grow even more 🌱.        <img src="https://i.pinimg.com/564x/b4/2d/74/b42d740ef09471c4f96a521743d58887.jpg" alt="Smart Image">
+    </div>
+
+    <div id="nice" class="result">
+     You make me feel cherished in ways I never thought possible 💖. You listen with an open heart, truly understanding me and making me feel valued and loved—a rare and precious gift 🌹. I adore you for all these beautiful things and for the warmth you bring into my life ☀️. Every moment with you feels like a treasure 💎, and I love you more deeply than words could ever express ❤️.
+        <img src="https://i.pinimg.com/564x/d0/76/bb/d076bbd1da6e92fc4d1fb2dd917d9076.jpg" alt="Nice Image">
+    </div>
+
+    <div id="cute" class="result">
+       You have no idea how much it meant to me when you suggested we exchange love notes—it was the sweetest, most thoughtful idea ever 🥰, and it made me love you even more. And that smile of yours 😍… it’s pure magic! It captures my heart every single time 💫. Each glance, each note, every single moment with you just deepens what I feel 💖, making me fall harder and love you more than I ever imagined possible ❤️.
+        <img src="https://i.pinimg.com/564x/cb/5a/d3/cb5ad3c5055c9ec2768d85226265361e.jpg" alt="Cute Image">
+    </div>
+
+    <div id="love" class="result">
+        It’s not about anything specific that made me fall for you; it’s simply you 💫. With every little detail, you’ve become the most perfect person in my world. I can’t imagine anyone fitting me better, like the final piece of my puzzle 🧩. You complete me in ways I never knew were possible. I love you, endlessly and effortlessly, for exactly who you are ❤️.
+        <img src="https://i.pinimg.com/564x/23/94/65/23946541bc559057f118125453c52dcc.jpg" alt="Love Image">
+    </div>
+
+    <script>
+        function showResult() {
+            // Hide all results
+            document.querySelectorAll('.result').forEach(div => div.style.display = 'none');
+            
+            // Show the selected result
+            const selectedValue = document.getElementById('value-list').value;
+            if (selectedValue) {
+                document.getElementById(selectedValue).style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
